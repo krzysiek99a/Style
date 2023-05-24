@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Style.MainPage"
+             x:Name="calaApka">
+
+
+    <ContentPage.Resources>
+
+        <Style TargetType="StackLayout" x:Key="jasny" >
+            <Setter Property="BackgroundColor" Value="Bisque"></Setter>
+        </Style>
+
+
+        <Style TargetType="StackLayout" x:Key="ciemny" >
+            <Setter Property="BackgroundColor" Value="Brown"></Setter>
+        </Style>
+
+
+        <Style TargetType="Label" >
+            <Setter Property="TextColor" Value="Red"> </Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                    <Setter Property="BackgroundColor" Value="red"></Setter>
+                    <Setter Property="FontSize" Value="30"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+       
+    </ContentPage.Resources>
+
+    <StackLayout x:Name="apka" Style="{DynamicResource jasny}" >
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" Padding="30,0,30,0"/>
+        <Label  Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Learn more at "/>
+                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Entry ></Entry>
+        <Button Text="Zmien" Clicked="Button_Clicked" ></Button>
+    </StackLayout>
+
+</ContentPage>
